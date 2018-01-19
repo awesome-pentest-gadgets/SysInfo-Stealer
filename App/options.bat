@@ -10,7 +10,7 @@ echo 2) Turn on telnet (GREAT for lan connection from another computer)
 echo 3) Shutdown computer with message
 echo 4) Disconnect from internet and make it hard to turn back on
 echo 5) Reconnect to internet after hard disconnect
-echo U) Check for updates
+echo 99) Exit
 set /p choice=
 if %choice% == 0 goto :cp
 if %choice% == 1 goto :gi
@@ -18,8 +18,7 @@ if %choice% == 2 goto :et
 if %choice% == 3 goto :swm
 if %choice% == 4 goto :dci
 if %choice% == 5 goto :rci
-if %choice% == U goto :upd
-if %choice% == u goto :upd
+if %choice% == 99 goto :tnx
 cls
 :cp
 echo ....
@@ -104,13 +103,8 @@ if %errorLevel% == 0 (
 	pause
 	goto eos
 	)
-:upd
-echo You are currently running version 3.0. 
-echo Were going to launch the repository where new versions are stored
-echo If any of the commits are higher then 3.0 you need to update!
-start https://github.com/thehackingsage/Auto-Hacking-USB
-echo Download the zip and replace the new files with the old.
+:tnx
+echo Thanks For Using My Program... Visit https://github.com/thehackingsage for more great stuffs.
 pause
-goto :starthere
-	
+goto :eof
 
