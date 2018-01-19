@@ -106,5 +106,5 @@ if %errorLevel% == 0 (
 :tnx
 echo Thanks For Using My Program... Visit https://github.com/thehackingsage for more great stuffs.
 pause
-goto :eof
+goto :EOF
 
